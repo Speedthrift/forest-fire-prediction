@@ -691,6 +691,13 @@ form button[type="submit"]:hover {
         margin-bottom: 15px;
         }
 
+.section-sentence1 {
+        font-size: 18px;
+        font-weight: 400;
+        opacity: 0.9;
+        margin-bottom: 15px;
+        }
+
         /* Subheading */
 .section-subheading {
         font-size: 20px;
