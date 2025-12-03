@@ -1,0 +1,37 @@
+{% extends 'index.html' %} {% block content %}
+
+<div class="container">
+    <div class='text-center'>
+        <h2>Multi-Point Prediction</h2>
+    </div>
+  </div>
+  
+<form action="/alg/predict-multi" method="POST" class="custom-form">
+
+    <h1 class="form-title">Input Fields</h1>
+
+    <div class="form-group">
+        <label for="multi">Enter Temperature, Wind Speed, FFMC, DMC, ISI as CSV</label>
+        <textarea
+            class="form-control"
+            name="multi"
+        ></textarea>
+    </div>
+        <div class="form-group">
+            <label for="mdname">Select Model</label>
+            <select name="mdname" id="mdname" class="form-control custom-select">
+                <option value="1">Classification (default)</option>
+                <option value="2">Regression</option>
+            </select>
+        </div>
+    <button type="submit" class="custom-btn">Submit</button>
+
+    {% if prediction_fire %}
+    <div class="prediction-text">
+        <h3>{{ prediction_fire }}</h3>
+    </div>
+    {% endif %}
+
+</form>
+
+{%endblock%}

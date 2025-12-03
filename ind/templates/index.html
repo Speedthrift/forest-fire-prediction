@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Forest Fire Predictor</title>
+      <link rel="stylesheet" href="/static/styles.css">
+   </head>
+
+  <body>
+    <header>
+        <div class="logo">
+          
+                
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img
+            src="/static/ind/fire2.png"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+          Forest Fire Predictor
+        </a>
+      </div>
+
+        </div>
+        <nav class="nav-right">
+            <a href="/statistics">Statistics</a>
+            <a href="/learn-more">Learn More</a>
+            <a href="/">Home</a>
+            {% if indback %}
+            <a href="/ind/model-select">{{indback}}</a>
+            {% endif %}
+            {% if algback %}
+            <a href="/alg/model-select">{{algback}}</a>
+            {% endif %}
+        </nav>
+    </header>
+
+
+    <main>{% block content %} {% endblock %}</main>
+  </body>
+</html>

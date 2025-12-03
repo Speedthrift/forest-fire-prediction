@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class='container'>           
+    <div class='text-center'>
+    <p>        
+        <b>Temperature: </b>
+        Higher temperatures dry out vegetation and increase its flammability. In prediction models, temperature is used to estimate how easily fuels can ignite and how quickly a fire may spread.
+    </p>
+<p>    
+    <b>Oxygen: </b>
+        Oxygen supports combustion. Areas with higher oxygen concentration allow fires to ignite more readily and burn more intensely. Models use this parameter to assess fire-sustaining conditions in the environment.
+
+</p>
+<p>
+        <b>Humidity: </b>
+        Humidity measures the moisture content in the air. Low humidity dries fuel and increases fire risk, while high humidity suppresses ignition. It is a key factor for predicting ignition probability and fire behavior.
+
+</p>
+<p>
+        <b>Wind Speed: </b>
+        Wind accelerates fire spread by carrying heat, embers, and flames across larger distances. In models, wind speed is crucial for estimating fire propagation rate and direction.
+
+</p>
+<p>
+        <b>FFMC (Fine Fuel Moisture Code): </b>
+        FFMC represents the moisture content of surface litter and fine fuels. A higher FFMC value indicates drier fuels and higher ignition potential. It helps predict how easily a fire can start and sustain at the surface level.
+
+</p>
+<p>
+        <b>DMC (Duff Moisture Code): </b>
+        DMC reflects the moisture level in loosely compacted organic layers below the surface. Higher values indicate deeper fuel dryness and stronger potential for sustained burning. It is used for estimating fire intensity and spread beneath the canopy.
+
+</p>
+<p>
+        <b>ISI (Initial Spread Index): </b>
+        ISI combines FFMC and wind effects to estimate the initial rate of fire spread after ignition. Higher ISI values mean faster early-stage fire growth. It is widely used to assess fire danger and guide early response actions.
+</p>         
+        <div class="button-container">
+            <a href="/" class="btn-secondary link-button">Home</a>
+        </div>
+            
+            
+    </div>
+        
+        
+
+
+</div>
+
+{%endblock%}

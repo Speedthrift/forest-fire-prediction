@@ -1,0 +1,139 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class='container'>           
+    <div class='text-center'>
+        <div class="metrics-container">
+                <h2 class="model-title">Model: Logistic Regression</h2>
+                <div class="metric-box">
+                        <span class="metric-label">Accuracy Score:</span>
+                        <span class="metric-value">91.78%</span>
+                </div>
+
+                <div class="table-box">
+                        <table class="metrics-table">
+                                <thead>
+                                        <tr>
+                                                <th>Class</th>
+                                                <th>Precision</th>
+                                                <th>Recall</th>
+                                                <th>F1-Score</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                                <td>0</td>
+                                                <td>0.85</td>
+                                                <td>0.97</td>
+                                                <td>0.91</td>
+                                        </tr>
+                                        <tr>
+                                                <td>1</td>
+                                                <td>0.97</td>
+                                                <td>0.88</td>
+                                                <td>0.93</td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                </div>
+                <div class="confusion-box">
+                        <h3 class="conf-title">Confusion Matrix</h3>
+                        <img src="/static/ind/cf/lr.png" alt="Confusion Matrix" class="conf-img">
+                </div>
+        </div>
+
+        <div class="metrics-container">
+                <h2 class="model-title">Model: Decision Tree</h2>
+                <div class="metric-box">
+                        <span class="metric-label">Accuracy Score:</span>
+                        <span class="metric-value">94.52%</span>
+                </div>
+
+                <div class="table-box">
+                        <table class="metrics-table">
+                                <thead>
+                                        <tr>
+                                                <th>Class</th>
+                                                <th>Precision</th>
+                                                <th>Recall</th>
+                                                <th>F1-Score</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                                <td>0</td>
+                                                <td>0.91</td>
+                                                <td>0.97</td>
+                                                <td>0.94</td>
+                                        </tr>
+                                        <tr>
+                                                <td>1</td>
+                                                <td>0.98</td>
+                                                <td>0.93</td>
+                                                <td>0.95</td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                </div>
+                <div class="confusion-box">
+                        <h3 class="conf-title">Confusion Matrix</h3>
+                        <img src="/static/ind/cf/dt.png" alt="Confusion Matrix" class="conf-img">
+                </div>
+        </div>
+
+
+        <div class="metrics-container">
+                <h2 class="model-title">Model: Random Forest</h2>
+                <div class="metric-box">
+                        <span class="metric-label">Accuracy Score:</span>
+                        <span class="metric-value">95.89%</span>
+                </div>
+
+                <div class="table-box">
+                        <table class="metrics-table">
+                                <thead>
+                                        <tr>
+                                                <th>Class</th>
+                                                <th>Precision</th>
+                                                <th>Recall</th>
+                                                <th>F1-Score</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                                <td>0</td>
+                                                <td>0.91</td>
+                                                <td>1.00</td>
+                                                <td>0.95</td>
+                                        </tr>
+                                        <tr>
+                                                <td>1</td>
+                                                <td>1.00</td>
+                                                <td>0.93</td>
+                                                <td>0.96</td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                </div>
+                <div class="confusion-box">
+                        <h3 class="conf-title">Confusion Matrix</h3>
+                        <img src="/static/ind/cf/rf.png" alt="Confusion Matrix" class="conf-img">
+                </div>
+        </div>
+
+
+        <div class="button-container">
+            <a href="/statistics/compare" class="btn-secondary link-button">Comparison</a>
+            <a href="/" class="btn-secondary link-button">Home</a>
+        </div>
+            
+            
+    </div>
+        
+        
+
+
+</div>
+
+{%endblock%}

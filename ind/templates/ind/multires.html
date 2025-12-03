@@ -1,0 +1,44 @@
+{% extends 'index.html' %} {% block content %}
+
+<div class="container">
+    <div class='text-center'>
+        <h2>Multi-Point Prediction Result</h2>
+        <h2>with {{md}} model</h2>
+    </div>
+  </div>
+  
+<div class="wide-container">
+    <div class="inner-container">
+
+
+        <div class="header-row">
+            <div class="header-left">Locations</div>
+            <div class="header-right">Fire can happen</div>
+        </div>
+
+
+        <div class="content-row">
+
+            <div class="left-col">
+                {% for item in pts %}
+                    <div class="row-item">{{ item }}</div>
+                {% endfor %}
+            </div>
+
+
+            <div class="right-col">
+                {% for itm in res %}
+                    <div class="row-item right-align">{{ itm }}</div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        <div class="button-container">
+            <a href="/ind/predict-multi" class="btn-secondary link-button">Back</a>
+        </div>
+
+{%endblock%}

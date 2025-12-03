@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class='container'>
+    <div class='text-center'>
+        <h2>Select model</h2>
+
+        <div class="button-container">
+            <a href="/ind/predict-fire-lr" class="btn-secondary link-button">Logistic Regression Model</a>
+            <a href="/ind/predict-fire-dt" class="btn-secondary link-button">Decision Tree Model</a>
+            <a href="/ind/predict-fire-rf" class="btn-secondary link-button">Random Forest Model</a>
+            <a href="/ind/predict-multi" class="btn-secondary link-button">Multiple Data Points</a>
+        </div>
+
+        <div class="button-container">
+            <a href="/ind/predict-multi" class="btn-secondary link-button">Multiple Data Points</a>
+            <a href="/ind/api/select-city" class="btn-secondary link-button">API Based City Search</a>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+{%endblock%}

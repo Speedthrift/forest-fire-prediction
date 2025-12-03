@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+         
+        
+<div class="content-wrapper">
+        
+        <div class="content-card">
+        {% for section in sections %}
+        <div class="content-card1">
+                <div class="section-block">
+                
+                <h2 class="section-heading">{{ section.heading }}</h2>
+
+                <p class="section-sentence">{{ section.sentence }}</p>
+
+                <h3 class="section-subheading">{{ section.subheading }}</h3>
+
+                <ul class="section-list">
+                        {% for point in section.points %}
+                        <li>{{ point }}</li>
+                        {% endfor %}
+                </ul>
+
+                </div>
+        </div>
+        {% endfor %}
+</div>
+
+</div>
+
+
+
+<div class='text-center'>
+        <div class="button-container">
+            <a href="/statistics" class="btn-secondary link-button">Statistics</a>
+            <a href="/" class="btn-secondary link-button">Home</a>
+        </div>
+            
+    </div>
+        
+        
+
+
+
+
+{%endblock%}

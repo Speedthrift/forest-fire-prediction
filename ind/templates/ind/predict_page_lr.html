@@ -1,0 +1,56 @@
+{% extends 'index.html' %} {% block content %}
+
+<div class="container">
+    <div class='text-center'>
+        <h2>Logistic Regression</h2>
+    </div>
+  </div>
+  
+<form action="/ind/predict-fire-lr" method="POST" class="custom-form">
+
+    <h1 class="form-title">Input Fields</h1>
+
+    <div class="form-group">
+        <label for="Temperature">Temperature</label>
+        <input
+            type="number"
+            class="form-control"
+            name="Temperature"
+            placeholder="Enter Temperature"
+            min="1"
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="Oxygen">Oxygen</label>
+        <input
+            type="number"
+            class="form-control"
+            name="Oxygen"
+            placeholder="Enter Oxygen"
+            min="1"
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="Humidity">Humidity</label>
+        <input
+            type="number"
+            class="form-control"
+            name="Humidity"
+            placeholder="Enter Humidity"
+            min="1"
+        >
+    </div>
+
+    <button type="submit" class="custom-btn">Submit</button>
+
+    {% if prediction_fire %}
+    <div class="prediction-text">
+        <h3>{{ prediction_fire }}</h3>
+    </div>
+    {% endif %}
+
+</form>
+
+{%endblock%}

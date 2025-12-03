@@ -1,0 +1,23 @@
+{% extends 'index.html' %} {% block content %}
+
+<div class="container">
+    <div class='text-center'>
+        <h2>Current prediction based on {{model}} model</h2>
+    </div>
+  </div>
+  {% if api_res %}
+  <div class="custom-form">
+
+
+      {% autoescape false %}
+      <h3>{{ content }}</h3>
+      {% endautoescape %}
+
+
+</div>
+    {% endif %}
+
+        <div class="button-container">
+            <a href="/ind/api/select-city" class="btn-secondary link-button">Back</a>
+        </div>
+{%endblock%}

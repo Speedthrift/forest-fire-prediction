@@ -1,0 +1,72 @@
+{% extends 'index.html' %} {% block content %}
+
+<div class="container">
+    <div class='text-center'>
+        <h2>Select City</h2>
+    </div>
+  </div>
+  
+<form action="/ind/api/result" method="POST" class="custom-form">
+
+    <h1 class="form-title">Input Fields</h1>
+
+        <div class="form-group">
+            <label for="city_name">Select City</label>
+            <select name="city_name" id="city_name" class="form-control custom-select">
+                <option value="">Select City</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Amritsar">Amritsar</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Bhopal">Bhopal</option>
+                <option value="Bhubaneswar">Bhubaneswar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Dehradun">Dehradun</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Ghaziabad">Ghaziabad</option>
+                <option value="Gurugram">Gurugram</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Indore">Indore</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Kochi">Kochi</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Lucknow">Lucknow</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Noida">Noida</option>
+                <option value="Pune">Pune</option>
+                <option value="Raipur">Raipur</option>
+                <option value="Surat">Surat</option>
+                <option value="Visakhapatnam">Visakhapatnam</option>
+
+            </select>
+        </div>
+            <h3>or</h3>
+                <div class="form-group">
+        <label for="city_name_text">Enter city name</label>
+        <textarea
+            class="form-control"
+            name="city_name_text"
+        ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="mdname">Select Model</label>
+            <select name="mdname" id="mdname" class="form-control custom-select">
+                <option value="1">Logistic Regression (default)</option>
+                <option value="2">Decision Tree</option>
+                <option value="3">Random Forest</option>
+            </select>
+        </div>
+    <button type="submit" class="custom-btn">Submit</button>
+
+    {% if prediction_fire %}
+    <div class="prediction-text">
+        <h3>{{ prediction_fire }}</h3>
+    </div>
+    {% endif %}
+
+</form>
+
+{%endblock%}
