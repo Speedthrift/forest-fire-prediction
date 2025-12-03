@@ -1,0 +1,742 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        min-height: 100vh;
+        color: #333;
+        }
+
+        /* Header Bar */
+header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 3rem;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+.logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #667eea;
+        }
+
+.nav-right {
+        display: flex;
+        gap: 2rem;
+        }
+
+.nav-right a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s;
+        }
+
+.nav-right a:hover {
+        color: #667eea;
+        }
+
+        /* Main Content Container */
+.container {
+        /*  max-width: 800px; */
+        width: 1250px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        text-align: center;
+        }
+
+        /* Main Content Container */
+.container2 {
+        /*  max-width: 800px; */
+        width: 1250px;
+        margin: 0 auto;
+        padding: 1.5rem 2rem;
+        text-align: center;
+        }
+
+        /* GIF Section */
+.gif-container {
+        margin: 2rem 0;
+        }
+
+.gif-container img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heading */
+h1 {
+        font-size: 3rem;
+        color: white;
+        margin: 2rem 0 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Paragraph */
+p {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.95);
+        line-height: 1.8;
+        margin-bottom: 2.5rem;
+        /* max-width: 600px; */
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+h2 {
+        color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 5px;
+        }
+h3 {
+        color: rgba(255, 255, 255, 0.95);
+        }
+
+        /*
+        a:focus,
+        a:hover
+{
+        color: rgba(102, 126, 234, 0.8);;
+        }
+        */
+
+        a,
+        a:link,
+        a:visited,
+        a:hover,
+        a:active,
+a:focus {
+        text-decoration: none;
+        color: rgba(102, 126, 234, 1);
+
+        }
+
+        /* Buttons */
+.button-container {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+        }
+
+button {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+.btn-primary {
+        background: white;
+        color: #667eea;
+        }
+
+.btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        color: rgba(102, 126, 234, 0.8);
+        }
+
+.btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+        }
+
+.btn-secondary:hover {
+        background: white;
+        color: #667eea;
+        transform: translateY(-2px);
+        }
+
+.navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;  /* space between logo and text */
+        }
+
+.navbar-brand img {
+        display: block;
+        }
+
+
+.link-button {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        border: none;
+        }
+
+        /* Primary Button Colors (same as your .btn-primary for <button>): */
+.link-button.btn-primary {
+        background: white;
+        color: #667eea;
+        }
+
+.link-button.btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        color: rgba(102, 126, 234, 0.8);
+        }
+
+.link-button.btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+        }
+
+.link-button.btn-secondary:hover {
+        background: white;
+        color: #667eea;
+        transform: translateY(-2px);
+        }
+
+
+        /* Form Container */
+form {
+        background: rgba(255, 255, 255, 0.14);
+        padding: 2rem;
+        border-radius: 20px;
+        max-width: 600px;
+        margin: 2rem auto;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Form Header */
+form h1 {
+        color: white;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        }
+
+        /* Input Fields */
+.form-group {
+        margin-bottom: 1.5rem;
+        }
+
+.form-group input {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 12px;
+        border: none;
+        font-size: 1.1rem;
+        outline: none;
+        transition: 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Input Focus Effect */
+.form-group input:focus {
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.6);
+        }
+
+        /* Placeholder Styling */
+.form-group input::placeholder {
+        color: #999;
+        font-weight: 500;
+        }
+
+        /* Submit Button */
+form button[type="submit"] {
+        display: block;
+        margin: 1rem auto 0 auto;
+        padding: 1rem 2.5rem;
+        background: white;
+        color: #667eea;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Button Hover Effect */
+form button[type="submit"]:hover {
+        transform: translateY(-2px);
+        color: rgba(102, 126, 234, 0.8);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Prediction Text */
+.prediction-output h3 {
+        color: white;
+        text-align: center;
+        margin-top: 2rem;
+        }
+
+        /* Form container */
+.custom-form {
+        max-width: 450px;
+        margin: 5px auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.14);
+        border-radius: 18px;
+        box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+        text-align: center;
+        }
+
+        /* Title */
+.form-title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        margin-top: 0px;
+        font-weight: 700;
+        color: #a1ade4ff;
+        }
+
+        /* Input fields */
+.custom-form .form-control {
+        border-radius: 12px;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        border: 1px solid #d4d4d4;
+        transition: 0.3s ease;
+        }
+
+.custom-form .form-control:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 4px rgba(102,126,234,0.2);
+        }
+
+        /* Prediction text */
+.prediction-text {
+        margin-top: 25px;
+        padding: 15px;
+        background: rgba(102, 126, 234, 0.1);
+        border-radius: 12px;
+        color: #e5eaff;
+        font-weight: 600;
+        font-size: 1.2rem;
+        }
+
+        /* Submit button */
+.custom-btn {
+        width: 100%;
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        background: white;
+        color: #667eea;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+.custom-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        color: rgba(102, 126, 234, 0.8);
+        }
+
+        /* Form Labels */
+.custom-form label {
+        display: block;
+        text-align: left;
+        margin-bottom: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #e5eaff; /* soft white-blue tone matching your theme */
+        letter-spacing: 0.5px;
+        }
+
+.custom-form textarea.form-control {
+        width: 100%;
+        min-height: 150px;   /* Increase vertical size */
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid #d4d4d4;
+        font-size: 1rem;
+        resize: vertical;    /* Allow user to resize vertically only */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+.custom-form textarea.form-control:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 4px rgba(102,126,234,0.2);
+        }
+
+        /* Styled Select Dropdown */
+.custom-form .custom-select {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border-radius: 12px;
+        border: 1px solid #d4d4d4;
+        font-size: 1rem;
+        background: white;
+        cursor: pointer;
+        appearance: none;        /* Removes default browser styling */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: 0.3s ease;
+        }
+
+        /* Focus effect */
+.custom-form .custom-select:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 4px rgba(102,126,234,0.2);
+        outline: none;
+        }
+
+        /* Optional: custom arrow icon */
+.custom-form .custom-select {
+        background-image: url("data:image/svg+xml,%3Csvg fill='%23667eea' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 18px;
+        }
+
+        /* Font for the choices inside the dropdown */
+.custom-form .custom-select option {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #333;                                         /* text color */
+        }
+
+        /* --- Outer Wide Container (Centered, 60% width) --- */
+.wide-container {
+        width: 50%;
+        margin: 3rem auto;
+        margin-top: 0;
+        padding: 1rem;
+        }
+
+        /* --- Two Columns (70:30 layout) --- */
+.two-col {
+        display: grid;
+        grid-template-columns: 70% 20%;
+        gap: 2rem;
+        }
+
+        /* --- Column Styling matching your form's glass theme --- */
+        .col-left,
+.col-right {
+        background: rgba(255, 255, 255, 0.14);
+        padding: 1.5rem 1.8rem;
+        border-radius: 18px;
+        box-shadow: 0 4px 25px rgba(0,0,0,0.20);
+        backdrop-filter: blur(10px);
+        color: white;
+        }
+
+        /* --- Row items inside both columns --- */
+.row-item {
+        padding: 0.9rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        font-size: 1.1rem;
+        font-weight: 500;
+        }
+        /* Center items inside the right column rows */
+.right-align {
+        display: flex;
+        justify-content: center;   /* Horizontal center */
+        align-items: center;       /* Vertical center */
+        text-align: center;
+        }
+.row-item:last-child {
+        border-bottom: none;
+        }
+
+
+        /* Outer centered box */
+.wide-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        }
+
+.inner-container {
+        width: 60%;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(255,255,255,0.2);
+        color: #ffffff;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        /* ---------------- HEADER ROW ---------------- */
+.header-row {
+        display: flex;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 18px;
+        }
+
+.header-left {
+        width: 70%;
+        }
+
+.header-right {
+        width: 30%;
+        text-align: center;
+        }
+
+        /* ---------------- CONTENT ROW ---------------- */
+.content-row {
+        display: flex;
+        gap: 20px;
+        }
+
+        /* Column widths */
+.left-col {
+        width: 70%;
+        }
+
+.right-col {
+        width: 30%;
+        }
+
+        /* Column widths */
+.left-col1 {
+        width: 80%;
+        }
+
+.right-col1 {
+        width: 20%;
+        }
+
+        /* Row boxes */
+.row-item {
+        padding: 10px 12px;
+        margin-bottom: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(255,255,255,0.15);
+        font-size: 16px;
+        }
+
+        /* Center items in right column */
+.right-align {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        }
+
+
+.metrics-container {
+        width: 60%;
+        margin: 40px auto;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        color: #fff;
+        font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.20);
+        }
+
+        /* Title */
+.model-title {
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 20px;
+        }
+
+        /* Accuracy box */
+.metric-box {
+        /* display: flex; */
+        justify-content: space-between;
+        padding: 12px 15px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        margin-bottom: 25px;
+        box-shadow: 0 0 6px rgba(255,255,255,0.15);
+        }
+
+.metric-label {
+        font-size: 17px;
+        }
+
+.metric-value {
+        font-weight: 600;
+        font-size: 18px;
+        }
+
+        /* Table box */
+.table-box {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 0 6px rgba(255,255,255,0.15);
+        }
+
+        /* Table formatting */
+.metrics-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        font-size: 16px;
+        }
+
+.metrics-table th {
+        padding: 10px;
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.15);
+        }
+
+.metrics-table td {
+        padding: 10px;
+        }
+
+.metrics-table tr:nth-child(even) {
+        background: rgba(255, 255, 255, 0.07);
+        }
+
+
+.confusion-box {
+        margin-top: 25px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        box-shadow: 0 0 6px rgba(255,255,255,0.15);
+        text-align: center;
+        }
+
+.conf-title {
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #fff;
+        }
+
+.conf-img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+
+        /* Center wrapper */
+.content-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        }
+
+        /* Glass card */
+.content-card {
+        width: 65%;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(12px);
+        padding: 35px;
+        border-radius: 18px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 12px rgba(255,255,255,0.18);
+        color: #ffffff;
+        font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        text-align: left;
+        }
+
+.content-card1 {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(12px);
+        padding: 35px;
+        border-radius: 18px;
+        box-shadow: 0 0 12px rgba(255,255,255,0.18);
+        color: #ffffff;
+        font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        text-align: left;
+        margin-bottom: 5px;
+}
+
+
+
+        /* Section block spacing */
+.section-block {
+        margin-bottom: 40px;
+        }
+
+        /* Heading */
+.section-heading {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        }
+
+        /* One-sentence text */
+.section-sentence {
+        font-size: 16px;
+        opacity: 0.9;
+        margin-bottom: 15px;
+        }
+
+        /* Subheading */
+.section-subheading {
+        font-size: 20px;
+        margin-bottom: 8px;
+        font-weight: 500;
+        }
+
+        /* Bullet points */
+.section-list {
+        margin-left: 20px;
+        margin-top: 5px;
+        }
+
+.section-list li {
+        margin-bottom: 6px;
+        opacity: 0.95;
+        }
+
+
+
+
+        /* Responsive Design */
+@media (max-width: 768px) {
+header {
+        padding: 1rem 1.5rem;
+        }
+
+.nav-right {
+        gap: 1rem;
+        }
+
+h1 {
+        font-size: 2rem;
+        }
+
+p {
+        font-size: 1rem;
+        }
+
+.button-container {
+        flex-direction: column;
+        align-items: center;
+        }
+
+button {
+        width: 100%;
+        max-width: 300px;
+        }
+        }
